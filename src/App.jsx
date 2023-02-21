@@ -1,6 +1,8 @@
 import React from "react"
+import { Catalog } from "./components/Catalog/Catalog"
 import { Container } from "./components/Container/Container" 
 import { Header } from "./components/Header/Header"
+import { Navigation } from "./components/Navigation/Navigation"
 
 
 
@@ -10,12 +12,8 @@ export const App = () => {
     <>
       <Header />
       <main>
-        <nav>
-          <Container className="navigation_container" />
-        </nav>
-        <section>
-          <Container />
-        </section>
+        <Navigation />
+        <Catalog />
       </main>
       <footer></footer>
     </>
