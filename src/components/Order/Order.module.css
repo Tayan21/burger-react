@@ -68,23 +68,9 @@
   margin-bottom: 13px;
 }
 
-.order__item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 0;
-  border-bottom: 1px solid #F2F2F3;
-}
 
-.order__item:first-child {
-  border-top: 1px solid #F2F2F3;
-}
 
-.order__image {
-  width: 64px;
-  height: 52px;
-  border-radius: 8px;
-}
+
 
 .order__total {
   display: flex;
@@ -176,9 +162,7 @@
     font-size: 12px;
   }
 
-  .order__item  {
-    padding: 15px 0;
-  }
+
 
   .order__wrap_list {
     display: block;
