@@ -1,25 +1,37 @@
+import { useDispatch } from "react-redux";
+import { API_URI } from "../../const";
+import { addProduct } from "../../store/order/orderSlice";
 import style from "./CatalogProduct.module.css";
 
-export const CatalogProduct = (props) => {
+export const CatalogProduct = ({ item }) => {
+  
+  const dispatch = useDispatch()
+  
   return (
     <article className={style.product}>
       <img
-        src="img/photo-1.jpg"
-        alt={props.title}
+        src={`${API_URI}/${item.image}`}
+        alt={item.title}
         className={style.product__image}
       />
 
       <p className={style.product__price}>
-        550<span className="currency">₽</span>
+        {item.price}<span className="currency">₽</span>
       </p>
 
       <h3 className={style.product__title}>
-        <button className={style.product__detail}>{props.title}</button>
+        <button className={style.product__detail}>{item.title}</button>
       </h3>
 
-      <p className={style.product__weight}>512г</p>
+      <p className={style.product__weight}>{item.weight}</p>
 
-      <button className={style.product__add} type="button">
+      <button 
+        className={style.product__add} 
+        type="button"
+        onClick={() => {
+          dispatch(addProduct({id: item.id}))
+        }}
+      >
         Добавить
       </button>
     </article>
