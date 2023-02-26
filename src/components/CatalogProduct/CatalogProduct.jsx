@@ -16,7 +16,7 @@ export const CatalogProduct = ({ item }) => {
       />
 
       <p className={style.product__price}>
-        {item.price}<span className="currency">₽</span>
+        {item.price}<span className="currency">&nbsp;₽</span>
       </p>
 
       <h3 className={style.product__title}>
